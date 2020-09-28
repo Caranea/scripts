@@ -1,0 +1,17 @@
+{
+    "name": "Getting Started Example",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "background": {
+      "scripts": ["companyscraper.js"],
+      "persistent": false
+    },
+    "manifest_version": 2,
+    "permissions": ["tabs", "webNavigation","https://www.gumtree.pl/*", "https://www.1st-art-gallery.com/*", "https://www.pkt.pl/szukaj/*", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.gumtree.pl/*","https://www.1st-art-gallery.com/*", "https://www.pkt.pl/szukaj/*"],
+        "js": ["companyscraper.js"]
+      }]
+    
+  }
